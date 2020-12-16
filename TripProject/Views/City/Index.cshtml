@@ -1,0 +1,24 @@
+﻿
+@model TripProject.Models.DbModels.City
+
+
+<form style="margin-top:200px" asp-action="Create" asp-controller="City"  asp-antiforgery="true">
+    <div class="align-center form-group" style="margin-top:20px;margin-bottom:75px;">
+        <label asp-for="Name">Назва</label>
+        <input asp-for="Name" style="text-align:center" type="text" placeholder="Ім'я" />
+
+    </div>
+    <div class="align-center" style="margin-top:20px;margin-bottom:75px">
+        <label asp-for="TicketPrice">Ціна</label>
+        <input asp-for="TicketPrice" style="text-align:center" type="text" placeholder="Фамілія" />
+
+    </div>
+    <div class="align-center" style="margin-top:20px;margin-bottom:75px">
+        <label asp-for="TypeId">Тип</label>
+        <select asp-for="TypeId" asp-items="ViewBag.CityTypeList">
+        </select>
+
+    </div>
+    <input type="submit" class="primary" value="Створити" />
+
+</form>

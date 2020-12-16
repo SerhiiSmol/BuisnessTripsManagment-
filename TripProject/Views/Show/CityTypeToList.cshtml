@@ -1,0 +1,43 @@
+﻿@model IEnumerable<TripProject.Models.DbModels.Citytype>
+
+@await Html.PartialAsync("ButtonsForListsPartial")
+
+
+<section id="two" class="wrapper style3 fade-up">
+    <div class="inner">
+        <div class="table-wrapper">
+            <table class="alt">
+                <thead>
+                    <tr>
+                        <th>
+                            <label>Тип</label>
+                        </th>
+                        <th>
+                            <label>Ціна за проживання</label>
+                        </th>
+
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Type)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AccommodationPrice)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", "CityType", new { id = item.Id }) |
+                                @Html.ActionLink("Delete", "Delete", "CityType", new { id = item.Id })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</section>

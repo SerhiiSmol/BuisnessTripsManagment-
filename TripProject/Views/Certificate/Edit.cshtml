@@ -1,0 +1,49 @@
+﻿@model TripProject.Models.DbModels.Certificate
+
+
+
+
+<div class="row">
+    <div class="col-4-medium">
+        <form asp-action="Edit" asp-controller="Certificate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="align-center form-group" style="margin-top:20px;margin-bottom:75px;">
+                <label asp-for="WorkerId">Працівник</label>
+                <select  asp-for="WorkerId" asp-items="ViewBag.WorkersList">
+                </select>
+                <span asp-validation-for="WorkerId" class="text-danger"></span>
+            </div>
+
+            <div class="align-center form-group" style="margin-top:20px;margin-bottom:75px;">
+
+                <label asp-for="CityId">Місто</label>
+                <select  asp-for="CityId" asp-items="ViewBag.CitiesList">
+                </select>
+                <span asp-validation-for="CityId" class="text-danger"></span>
+            </div>
+
+            <div class="align-center form-group" style="margin-top:20px;margin-bottom:75px;">
+
+                <label asp-for="Beginning" class="control-label">Початок</label>
+                <input asp-for="Beginning" style="text-align:center;width:100%;color:black" class="form-control" placeholder="Ім'я" />
+                <span asp-validation-for="Beginning" class="text-danger"></span>
+            </div>
+
+            <div class="align-center form-group" style="margin-top:20px;margin-bottom:75px;">
+
+                <label asp-for="Ending" class="control-label">Кінець</label>
+                <input  asp-for="Ending" class="form-group" style="text-align:center;width:100%;color:black" placeholder="Ім'я" />
+                <span asp-validation-for="Ending" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-2 col-12-medium" style="margin:80px;">
+                    <input type="submit" value="Зберегти" class="primary" />
+                </div>
+                <div class="col-2 col-12-medium" style="margin:80px;">
+                    <a class="button" asp-action="Index" asp-controller="Show">Назад до списку</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

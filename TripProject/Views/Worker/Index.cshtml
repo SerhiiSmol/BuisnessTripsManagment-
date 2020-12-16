@@ -1,0 +1,24 @@
+﻿
+
+@model TripProject.Models.DbModels.Worker
+
+
+<form style="margin-top:200px" asp-action="Create" asp-controller="Worker">
+    <div class="align-center form-group" style="margin-top:20px;margin-bottom:75px;" >
+        <label asp-for="FirstName">Ім'я</label>
+        <input asp-for="FirstName" style="text-align:center" type="text" placeholder="Ім'я" />
+
+    </div>
+    <div class="align-center" style="margin-top:20px;margin-bottom:75px">
+        <label asp-for="LastName">Фамілія</label>
+        <input asp-for="LastName" style="text-align:center"  type="text" placeholder="Фамілія" />
+
+    </div>
+    <div class="align-center" style="margin-top:20px;margin-bottom:75px">
+        <label asp-for="Department">Відділ</label>
+        <input asp-for="Department" style="text-align:center"   placeholder="Відділ" type="text" />
+
+    </div>
+    <input  type="submit" class="primary"  value="Створити" />
+
+</form>

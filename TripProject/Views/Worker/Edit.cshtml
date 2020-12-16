@@ -1,0 +1,39 @@
+﻿@model TripProject.Models.DbModels.Worker
+
+
+
+
+
+<div class="row">
+    <div class="col-4-medium">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div style="margin:40px;">
+                <label asp-for="LastName" class="control-label">Фамілія</label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div style="margin:40px;">
+                <label asp-for="FirstName" class="control-label">Ім'я</label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div style="margin:40px;">
+                <label asp-for="Department" class="control-label">Відділ</label>
+                <input asp-for="Department" class="form-control" />
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-2 col-12-medium" style="margin:80px;">
+                    <input type="submit" value="Зберегти" class="primary" />
+                </div>
+                <div class="col-2 col-12-medium" style="margin:80px;">
+                    <a class="button" asp-action="Index" asp-controller="Show">Назад до списку</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+

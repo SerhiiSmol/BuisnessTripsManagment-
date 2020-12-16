@@ -1,0 +1,59 @@
+﻿@model IEnumerable<TripProject.Models.DbModels.Worker>
+
+
+@await Html.PartialAsync("ButtonsForListsPartial")
+
+
+<section id="two" class="wrapper style3 fade-up">
+    <div class="inner">
+        <div class="table-wrapper">
+            <table class="alt">
+                <thead>
+                    <tr>
+                        <th>
+                            <label>Айді</label>
+                        </th>
+                        <th>
+                            <label>Ім'я</label>
+                        </th>
+                        <th>
+                            <label>Фамілія</label>
+
+                        </th>
+                        <th>
+                            <label>Відділ</label>
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Id)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LastName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Department)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", "Worker", new { id = item.Id }) |
+                                @Html.ActionLink("Delete", "Delete", "Worker", new { id = item.Id })
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</section>
+
+

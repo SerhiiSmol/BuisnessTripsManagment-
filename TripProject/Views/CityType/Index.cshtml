@@ -1,0 +1,20 @@
+﻿
+
+@model TripProject.Models.DbModels.Citytype
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form style="margin-top:200px" asp-action="Create" asp-controller="CityType">
+
+            <div class="align-center form-group" style="margin-top:20px;margin-bottom:75px;">
+                <label asp-for="Type">Тип</label>
+                <input asp-for="Type" style="text-align:center" type="text" placeholder="Тип" />
+
+            </div>
+            <div class="align-center" style="margin-top:20px;margin-bottom:75px">
+                <label asp-for="AccommodationPrice">Ціна за проживання</label>
+                <input asp-for="AccommodationPrice" style="text-align:center" type="text" placeholder="Ціна за проживання" />
+            </div>
+            <input type="submit" class="primary" value="Створити" />
+
+        </form>
+    </div>
